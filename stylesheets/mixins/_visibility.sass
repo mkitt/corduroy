@@ -1,0 +1,80 @@
+// Totally hidden from screen readers and browsers
+@mixin hidden
+  display: none !important
+  visibility: hidden
+%hidden
+  +hidden
+
+
+// Reverse the effects of `hidden`
+@mixin shown
+  display: block
+  visibility: visible
+%shown
+  +shown
+
+
+// Hide visually and from screenreaders, but maintain layout
+@mixin invisible
+  visibility: hidden
+%invisible
+  +invisible
+
+
+// Only visually hidden, still available to screen readers
+@mixin visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  position: absolute
+  overflow: hidden
+  margin: -1px
+  padding: 0
+  width: 1px
+  height: 1px
+  &.focusable:active,
+  &.focusable:focus
+    clip: auto
+    position: static
+    overflow: visible
+    margin: 0
+    width: auto
+    height: auto
+%visuallyhidden
+  +visuallyhidden
+
+
+// Reverse the settings applied by `visuallyhidden`
+@mixin visuallyshown
+  clip: auto
+  clip: rect(auto auto auto auto)
+  position: static
+  overflow: visible
+  margin: 0
+  width: auto
+  height: auto
+%visuallyshown
+  +visuallyshown
+
+
+@mixin image-replacement
+  background-color: transparent
+  border: 0
+  overflow: hidden
+  &:before
+    content: ""
+    display: block
+    width: 0
+    height: 150%
+%image-replacement
+  +image-replacement
+
+
+@mixin checkbox-hack
+  position: absolute
+  visibility: hidden
+  opacity: 0
+%checkbox-hack
+  +checkbox-hack
+
+// Most of these courtesy of H5BP http://html5boilerplate.com/
+

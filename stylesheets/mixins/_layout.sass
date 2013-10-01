@@ -1,0 +1,37 @@
+@mixin clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+%clearfix
+  +clearfix
+
+
+@mixin sticky-footer($footer-height, $outer:".main", $inner:".content", $footer:".footer")
+  html, body
+    height: 100%
+  #{$outer}
+    min-height: 100%
+    overflow-x: hidden
+    width: 100%
+  #{$inner}
+    padding-bottom: $footer-height
+  #{$footer}
+    clear: both
+    position: relative
+    margin-top: $footer-height * -1
+    height: $footer-height
+    overflow: visible
+
+
+@mixin unsticky-footer($outer:".main", $inner:".content", $footer:".footer")
+  html, body
+    height: auto
+  #{$outer}
+    min-height: none
+  #{$inner}
+    padding-bottom: 0
+  #{$footer}
+    margin-top: auto
+    height: auto
+

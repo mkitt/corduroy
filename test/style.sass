@@ -1,0 +1,48 @@
+@import ../index
+
+// Functions
+
+/* expect: 1.25em
+.test-em-default
+  font-size: em(20)
+
+/* expect: 2em
+.test-em-context
+  padding: em(24, 12)
+
+/* expect: 1.25rem
+.test-rem-default
+  font-size: rem(20)
+
+/* expect: 2rem
+.test-rem-context
+  padding: rem(24, 12)
+
+
+// Mixins
+
+/*
+  expect:
+  .clearfix-mixin:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.clearfix-mixin
+  +clearfix
+
+/* expect above, but higher in the file
+.clearfix-placeholder
+  @extend %clearfix
+  display: block
+
+
+/* @font-face with asset pipeline (needs sprockets yo!)
++font-face("FontName", "font-file", $asset-pipeline:true)
+
+/* @font-face without asset pipeline
++font-face("FontName", "crazy/path/font-file")
+
+/* @font-face without asset pipeline, bold, italic
++font-face("FontName", "crazy/path/font-file", bold, italic)
+

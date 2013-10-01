@@ -1,0 +1,73 @@
+@mixin shape($width:6rem, $height:4rem, $border-radii: false)
+  @if $border-radii != false
+    border-radius: $border-radii
+  width: $width
+  height: $height
+
+
+@mixin rectangle($width:6rem, $height:4rem, $border-radii: false)
+  +shape($width, $height, $border-radii)
+
+
+@mixin square($size:4rem, $border-radii: false)
+  +shape($size, $size, $border-radii)
+
+
+@mixin circle($size:4rem)
+  +shape($size, $size, $size)
+
+
+@mixin oval($width:6rem, $height:4rem)
+  $_radii: #{$height} / #{$height * 0.5}
+  +shape($width, $height, $_radii)
+
+
+@function _cardinal_mapping($direction)
+  @if $direction == north
+    @return up
+  @if $direction == south
+    @return down
+  @if $direction == east
+    @return right
+  @if $direction == west
+    @return left
+  @if $direction == north-east
+    @return up-right
+  @if $direction == north-west
+    @return up-left
+  @if $direction == south-west
+    @return down-right
+  @if $direction == south-east
+    @return down-left
+  @return $direction
+
+
+@mixin triangle($direction, $size: 1rem, $color: black)
+  $direction: _cardinal_mapping($direction)
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left)
+    border-color: transparent
+    border-style: solid
+    border-width: $size * 0.5
+    @if ($direction == up) or ($direction == north)
+      border-bottom-color: $color
+    @else if $direction == right
+      border-left-color: $color
+    @else if $direction == down
+      border-top-color: $color
+    @else if $direction == left
+      border-right-color: $color
+  @else if ($direction == up-right) or ($direction == up-left)
+    border-top: $size solid $color
+    @if $direction == up-right
+      border-left: $size solid transparent
+    @else if $direction == up-left
+      border-right: $size solid transparent
+  @else if ($direction == down-right) or ($direction == down-left)
+    border-bottom: $size solid $color
+    @if $direction == down-right
+      border-left: $size solid transparent
+    @else if $direction == down-left
+      border-right: $size solid transparent
+  width: 0
+  height: 0
+

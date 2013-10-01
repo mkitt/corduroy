@@ -1,0 +1,79 @@
+%hardware-accelerate
+  transform: translateZ(0)
+  backface-visibility: hidden
+  perspective: 1000
+
+
+%zip-all
+  transition: all $speed ease
+
+
+%zip-transform
+  transition: transform $speed $ease-in-out-quart
+
+
+%zip-color
+  transition: color $speed ease
+
+
+%zip-background-color
+  transition: background-color $speed ease
+
+
+%zip-border-color
+  transition: border-color $speed ease
+
+
+%zip-background-border-color
+  transition: background-color $speed ease, border-color $speed ease
+
+
+%zip-hide
+  transition: opacity $speed ease 0s, visibility 0s ease $speed
+  opacity: 0
+  visibility: hidden
+
+
+%zip-show
+  transition-delay: 0s
+  visibility: visible
+  opacity: 1
+
+
+%zip-opacity
+  transition: opacity $speed ease
+
+
+%zip-fade-out
+  opacity: 0
+
+
+%zip-fade-in
+  opacity: 1
+
+
+%zip-height
+  transition: height $speed $ease-in-out-quart
+
+
+%zip-collapse
+  @extend %zip-height
+  position: relative
+  overflow: hidden
+  height: 0
+
+
+%zip-collapse-in
+  height: auto
+
+
+@keyframes rotation
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
+
+%zip-spin
+  animation: rotation 0.25s infinite linear
+

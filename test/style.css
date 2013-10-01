@@ -1,0 +1,102 @@
+/* line 2, ../mixins/_clearfix.sass */
+.clearfix-placeholder:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* expect: 1.25em */
+/* line 6, style.sass */
+.test-em-default {
+  font-size: 1.25em;
+}
+
+/* expect: 2em */
+/* line 10, style.sass */
+.test-em-context {
+  padding: 2em;
+}
+
+/* expect: 1.25rem */
+/* line 14, style.sass */
+.test-rem-default {
+  font-size: 1.25rem;
+}
+
+/* expect: 2rem */
+/* line 18, style.sass */
+.test-rem-context {
+  padding: 2rem;
+}
+
+/* expect:
+ * .clearfix-mixin:after {
+ *   content: "";
+ *   display: table;
+ *   clear: both;
+ * } */
+/* line 2, ../mixins/_clearfix.sass */
+.clearfix-mixin:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* expect above, but higher in the file */
+/* line 35, style.sass */
+.clearfix-placeholder {
+  display: block;
+}
+
+/* @font-face with asset pipeline (needs sprockets yo!) */
+@font-face {
+  font-family: "FontName";
+  font-weight: normal;
+  font-style: normal;
+  src: font-url("font-file.eot");
+  src: font-url("font-file.eot?#iefix") format("embedded-opentype"), font-url("font-file.woff") format("woff"), font-url("font-file.ttf") format("truetype"), font-url("font-file.svg#FontName") format("svg");
+}
+
+/* @font-face without asset pipeline */
+@font-face {
+  font-family: "FontName";
+  font-weight: normal;
+  font-style: normal;
+  src: url("crazy/path/font-file.eot");
+  src: url("crazy/path/font-file.eot?#iefix") format("embedded-opentype"), url("crazy/path/font-file.woff") format("woff"), url("crazy/path/font-file.ttf") format("truetype"), url("crazy/path/font-file.svg#FontName") format("svg");
+}
+
+/* @font-face without asset pipeline, bold, italic */
+@font-face {
+  font-family: "FontName";
+  font-weight: bold;
+  font-style: italic;
+  src: url("crazy/path/font-file.eot");
+  src: url("crazy/path/font-file.eot?#iefix") format("embedded-opentype"), url("crazy/path/font-file.woff") format("woff"), url("crazy/path/font-file.ttf") format("truetype"), url("crazy/path/font-file.svg#FontName") format("svg");
+}
+
+/* line 3, ../mixins/_sticky_footer.sass */
+html, body {
+  height: 100%;
+}
+
+/* line 5, ../mixins/_sticky_footer.sass */
+#an_id {
+  min-height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* line 9, ../mixins/_sticky_footer.sass */
+.content {
+  padding-bottom: 100px;
+}
+
+/* line 11, ../mixins/_sticky_footer.sass */
+.footer {
+  clear: both;
+  position: relative;
+  margin-top: -100px;
+  height: 100px;
+  overflow: visible;
+}
