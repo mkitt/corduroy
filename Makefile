@@ -1,9 +1,11 @@
-test:
-	@sass --style expanded --line-comments ./test/style.sass ./test/style.css
-	cat ./test/style.css
+test.css:
+	@sass --style expanded --line-comments ./test/test.sass ./test/test.css
 
-javascript:
+test.js:
 	@coffee -o ./test/ -c ./
+	@mv -f ./test/corduroy.js ./test/test.js
 
-.PHONY: test javascript
+test: test.css test.js
+
+.PHONY: test.css test.js test
 

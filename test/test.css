@@ -1,30 +1,42 @@
-/* line 2, ../mixins/_clearfix.sass */
+/* line 2, ../stylesheets/mixins/_layout.sass */
 .clearfix-placeholder:after {
   content: "";
   display: table;
   clear: both;
 }
 
+@keyframes animate-rotation {
+  /* line 2, ../stylesheets/movement/_animation.sass */
+  from {
+    transform: rotate(0deg);
+  }
+
+  /* line 4, ../stylesheets/movement/_animation.sass */
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* expect: 1.25em */
-/* line 6, style.sass */
+/* line 6, test.sass */
 .test-em-default {
   font-size: 1.25em;
 }
 
 /* expect: 2em */
-/* line 10, style.sass */
+/* line 10, test.sass */
 .test-em-context {
   padding: 2em;
 }
 
 /* expect: 1.25rem */
-/* line 14, style.sass */
+/* line 14, test.sass */
 .test-rem-default {
   font-size: 1.25rem;
 }
 
 /* expect: 2rem */
-/* line 18, style.sass */
+/* line 18, test.sass */
 .test-rem-context {
   padding: 2rem;
 }
@@ -35,7 +47,7 @@
  *   display: table;
  *   clear: both;
  * } */
-/* line 2, ../mixins/_clearfix.sass */
+/* line 2, ../stylesheets/mixins/_layout.sass */
 .clearfix-mixin:after {
   content: "";
   display: table;
@@ -43,7 +55,7 @@
 }
 
 /* expect above, but higher in the file */
-/* line 35, style.sass */
+/* line 35, test.sass */
 .clearfix-placeholder {
   display: block;
 }
@@ -73,30 +85,4 @@
   font-style: italic;
   src: url("crazy/path/font-file.eot");
   src: url("crazy/path/font-file.eot?#iefix") format("embedded-opentype"), url("crazy/path/font-file.woff") format("woff"), url("crazy/path/font-file.ttf") format("truetype"), url("crazy/path/font-file.svg#FontName") format("svg");
-}
-
-/* line 3, ../mixins/_sticky_footer.sass */
-html, body {
-  height: 100%;
-}
-
-/* line 5, ../mixins/_sticky_footer.sass */
-#an_id {
-  min-height: 100%;
-  overflow-x: hidden;
-  width: 100%;
-}
-
-/* line 9, ../mixins/_sticky_footer.sass */
-.content {
-  padding-bottom: 100px;
-}
-
-/* line 11, ../mixins/_sticky_footer.sass */
-.footer {
-  clear: both;
-  position: relative;
-  margin-top: -100px;
-  height: 100px;
-  overflow: visible;
 }

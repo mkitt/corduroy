@@ -11,3 +11,7 @@ $context-px: 16 !default
 @function percent($target-px, $context-width)
   @return percentage($target-px / $context-width)
 
+
+@function unitless_rem($target-px, $context:$context-px)
+  @return ($target-px / $context)
+

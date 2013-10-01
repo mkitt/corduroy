@@ -1,62 +1,42 @@
 # Corduroy
-A collection of Sass functions, mixins, placeholders and settings.
+A collection of Sass functions, mixins, placeholders along with a super
+minimal selector and event CoffeeScript library.
 
 
-## Functions
-
-### [em](functions/_em.sass)
-Convert a unitless `pixel` value to an `em` value. Takes an optional second
-parameter as the context. 
-
-```sass
-@import corduroy/functions/rem
-
-.heading
-  font-size: em(20) // outputs: font-size: 1.25em
-
-.subheading
-  font-size: em(24, 12) // outputs: font-size: 2em
-```
-
-** Note: By default the variable `$context-px` used for the optional
-second parameter is set to `16`. To override this value, set it prior to
-using this function.
-
-### [rem](functions/_rem.sass)
-Convert a unitless `pixel` value to a `rem` value. Takes an optional second
-parameter as the context. 
-
-```sass
-@import corduroy/functions/rem
-
-.heading
-  font-size: rem(20) // outputs: font-size: 1.25rem
-
-.subheading
-  font-size: rem(24, 12) // outputs: font-size: 2rem
-```
-
-** Note: By default the variable `$context-px` used for the optional
-second parameter is set to `16`. To override this value, set it prior to
-using this function.
+## Tasks
+- Add detect library (maybe a separate repo?)
+- Add remaining JS functions (split and concat them?)
+- Convert to a pure JS library
+- Separate JS from Sass into new library
+- Figure out naming (zip might be better for JS)
+- Add a retina image Sass mixin
+- Add vertical rhythm Sass functions
+- Test styles
+- Test behaviors
+- Document styles
+- Document behaviors
+- Add bower/gem integration?
+- Make the repo public
 
 
-## Mixins
+## Needed JS Functions
 
-### [clearfix](mixins/_clearfix.sass)
-The [new micro clearfix](http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php)
-utilizing pseudo elements to clear floats. Also comes with a placeholder
-for use with `@extend`.
+### Detect
+- transition.end
+- hasTransition
+- animation.end
+- hasAnimation
 
-```sass
-@import corduroy/mixins/clearfix
+### Selectors
+- parentSelectorAll
+- concat
 
-// mix it in!
-.row
-  +clearfix
+### Events
+- once
+- taponce
 
-// or extend the placeholder
-.row
-  @extend %clearfix
-```
+### DOM
+- html
+- offset
+- position
 

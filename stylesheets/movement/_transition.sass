@@ -4,76 +4,68 @@
   perspective: 1000
 
 
-%zip-all
+%transition-all
   transition: all $speed ease
 
 
-%zip-transform
-  transition: transform $speed $ease-in-out-quart
+%transition-transform
+  transition: transform $speed $ease-ios-panel
 
 
-%zip-color
+%transition-color
   transition: color $speed ease
 
 
-%zip-background-color
+%transition-background-color
   transition: background-color $speed ease
 
 
-%zip-border-color
+%transition-border-color
   transition: border-color $speed ease
 
 
-%zip-background-border-color
+%transition-background-border-color
   transition: background-color $speed ease, border-color $speed ease
 
 
-%zip-hide
+%transition-visibility
   transition: opacity $speed ease 0s, visibility 0s ease $speed
+
+
+%transition-hide
   opacity: 0
   visibility: hidden
 
 
-%zip-show
+%transition-show
   transition-delay: 0s
   visibility: visible
   opacity: 1
 
 
-%zip-opacity
+%transition-opacity
   transition: opacity $speed ease
 
 
-%zip-fade-out
+%transition-fade-out
   opacity: 0
 
 
-%zip-fade-in
+%transition-fade-in
   opacity: 1
 
 
-%zip-height
+%transition-height
   transition: height $speed $ease-in-out-quart
 
 
-%zip-collapse
-  @extend %zip-height
+%transition-collapse
+  @extend %transition-height
   position: relative
   overflow: hidden
   height: 0
 
 
-%zip-collapse-in
+%transition-collapse-in
   height: auto
-
-
-@keyframes rotation
-  from
-    transform: rotate(0deg)
-  to
-    transform: rotate(360deg)
-
-
-%zip-spin
-  animation: rotation 0.25s infinite linear
 
