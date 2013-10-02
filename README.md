@@ -2,22 +2,22 @@
 A small collection of Sass functions, mixins and placeholders.
 
 ## Tasks
-- Add a retina image Sass mixin
+- Abstract speed values
 - Add vertical rhythm Sass functions
-- Test styles
-- Document styles
-- Add bower/gem integration?
+- Document
+- Test outputs
 - Make the repo public
+- Add bower/component/gem integration
 
 
 ## Functions
 
-### [em](functions/_em.sass)
-Convert a unitless `pixel` value to an `em` value. Takes an optional second
-parameter as the context. 
+### [em($px, $context)](lib/functions/_conversion.sass)
+Convert a unitless `pixel` value to an `em` value. Takes an optional
+second parameter as the context. 
 
 ```sass
-@import corduroy/functions/rem
+@import corduroy/lib/functions/_conversion
 
 .heading
   font-size: em(20) // outputs: font-size: 1.25em
@@ -30,12 +30,12 @@ parameter as the context.
 second parameter is set to `16`. To override this value, set it prior to
 using this function.
 
-### [rem](functions/_rem.sass)
-Convert a unitless `pixel` value to a `rem` value. Takes an optional second
-parameter as the context. 
+### [rem($px, $context)](lib/functions/_conversion.sass)
+Convert a unitless `pixel` value to a `rem` value. Takes an optional
+second parameter as the context. 
 
 ```sass
-@import corduroy/functions/rem
+@import corduroy/lib/functions/_conversion
 
 .heading
   font-size: rem(20) // outputs: font-size: 1.25rem
@@ -47,6 +47,25 @@ parameter as the context.
 ** Note: By default the variable `$context-px` used for the optional
 second parameter is set to `16`. To override this value, set it prior to
 using this function.
+
+### [unitless_rem($px, $context)](lib/functions/_conversion.sass)
+Divide a unitless `pixel` value by a `context`, similar to the `#rem`
+function except the value returned does not contain a unit.
+
+```sass
+@import corduroy/lib/functions/_conversion
+
+.heading
+  line-height: unitless_rem(20) // outputs: line-height: 1.25rem
+
+.subheading
+  line-height: unitless_rem(24, 12) // outputs: line-height: 2rem
+```
+
+** Note: By default the variable `$context-px` used for the optional
+second parameter is set to `16`. To override this value, set it prior to
+using this function.
+
 
 
 ## Mixins
