@@ -8,10 +8,10 @@ $context-px: 16 !default
   @return ($px / $context) * 1rem
 
 
-@function unitless_rem($px, $context:$context-px)
+@function unit_less($px, $context:$context-px)
   @return ($px / $context)
 
 
-@function percent($px, $context-width)
-  @return percentage($px / $context-width)
+@function percent($px, $context)
+  @return percentage($px / $context)
 

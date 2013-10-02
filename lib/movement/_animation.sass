@@ -1,8 +1,9 @@
-@keyframes animate-rotation
-  from
-    transform: rotate(0deg)
-  to
-    transform: rotate(360deg)
+@mixin animate-rotation($start:0deg, $end:360deg)
+  @keyframes animate-rotation
+    from
+      transform: rotate($start)
+    to
+      transform: rotate($end)
 
 %animation-spin
   animation: animate-rotation $speed infinite linear

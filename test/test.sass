@@ -1,6 +1,6 @@
 @import ../corduroy
 
-// Functions
+// Conversion Functions
 
 /* expect: 1.25em
 .test-em-default
@@ -17,6 +17,28 @@
 /* expect: 2rem
 .test-rem-context
   padding: rem(24, 12)
+
+/* expect: 1.25
+.test-unitless-default
+  line-height: unit_less(20)
+
+/* expect: 2
+.test-unitless-context
+  line-height: unit_less(24, 12)
+
+/* expect: 50%
+.test-percentage
+  width: percent(500, 1000)
+
+// Coloring Functions
+
+/* expect: #cc00cc
+.test-shade
+  color: shade(magenta, 20%)
+
+/* expect: #ff33ff
+.test-tint
+  color: tint(magenta, 20%)
 
 
 // Mixins

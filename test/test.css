@@ -1,4 +1,3 @@
-/* line 2, ../lib/mixins/_layout.sass */
 .clearfix-placeholder:after {
   content: "";
   display: table;
@@ -6,39 +5,58 @@
 }
 
 @keyframes animate-rotation {
-  /* line 2, ../lib/movement/_animation.sass */
   from {
     transform: rotate(0deg);
   }
 
-  /* line 4, ../lib/movement/_animation.sass */
   to {
     transform: rotate(360deg);
   }
 }
 
 /* expect: 1.25em */
-/* line 6, test.sass */
 .test-em-default {
   font-size: 1.25em;
 }
 
 /* expect: 2em */
-/* line 10, test.sass */
 .test-em-context {
   padding: 2em;
 }
 
 /* expect: 1.25rem */
-/* line 14, test.sass */
 .test-rem-default {
   font-size: 1.25rem;
 }
 
 /* expect: 2rem */
-/* line 18, test.sass */
 .test-rem-context {
   padding: 2rem;
+}
+
+/* expect: 1.25 */
+.test-unitless-default {
+  line-height: 1.25;
+}
+
+/* expect: 2 */
+.test-unitless-context {
+  line-height: 2;
+}
+
+/* expect: 50% */
+.test-percentage {
+  width: 50%;
+}
+
+/* expect: #cc00cc */
+.test-shade {
+  color: #cc00cc;
+}
+
+/* expect: #cc00cc */
+.test-tint {
+  color: #ff33ff;
 }
 
 /* expect:
@@ -47,7 +65,6 @@
  *   display: table;
  *   clear: both;
  * } */
-/* line 2, ../lib/mixins/_layout.sass */
 .clearfix-mixin:after {
   content: "";
   display: table;
@@ -55,7 +72,6 @@
 }
 
 /* expect above, but higher in the file */
-/* line 35, test.sass */
 .clearfix-placeholder {
   display: block;
 }
