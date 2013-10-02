@@ -1,17 +1,17 @@
 $context-px: 16 !default
 
-@function em($target-px, $context:$context-px)
-  @return ($target-px / $context) * 1em
+@function em($px, $context:$context-px)
+  @return ($px / $context) * 1em
 
 
-@function rem($target-px, $context:$context-px)
-  @return ($target-px / $context) * 1rem
+@function rem($px, $context:$context-px)
+  @return ($px / $context) * 1rem
 
 
-@function percent($target-px, $context-width)
-  @return percentage($target-px / $context-width)
+@function unitless_rem($px, $context:$context-px)
+  @return ($px / $context)
 
 
-@function unitless_rem($target-px, $context:$context-px)
-  @return ($target-px / $context)
+@function percent($px, $context-width)
+  @return percentage($px / $context-width)
 
