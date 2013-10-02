@@ -1,4 +1,4 @@
-/* line 2, ../stylesheets/mixins/_layout.sass */
+/* line 2, ../lib/mixins/_layout.sass */
 .clearfix-placeholder:after {
   content: "";
   display: table;
@@ -6,12 +6,12 @@
 }
 
 @keyframes animate-rotation {
-  /* line 2, ../stylesheets/movement/_animation.sass */
+  /* line 2, ../lib/movement/_animation.sass */
   from {
     transform: rotate(0deg);
   }
 
-  /* line 4, ../stylesheets/movement/_animation.sass */
+  /* line 4, ../lib/movement/_animation.sass */
   to {
     transform: rotate(360deg);
   }
@@ -47,7 +47,7 @@
  *   display: table;
  *   clear: both;
  * } */
-/* line 2, ../stylesheets/mixins/_layout.sass */
+/* line 2, ../lib/mixins/_layout.sass */
 .clearfix-mixin:after {
   content: "";
   display: table;

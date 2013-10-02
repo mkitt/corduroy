@@ -87,4 +87,3 @@ for use with `@extend`.
   @extend %clearfix
 ```
 
-
