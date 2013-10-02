@@ -1,5 +1,13 @@
 # Corduroy
-A collection of Sass functions, mixins, placeholders and settings.
+A small collection of Sass functions, mixins and placeholders.
+
+## Tasks
+- Add a retina image Sass mixin
+- Add vertical rhythm Sass functions
+- Test styles
+- Document styles
+- Add bower/gem integration?
+- Make the repo public
 
 
 ## Functions
