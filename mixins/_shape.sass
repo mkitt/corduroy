@@ -1,15 +1,15 @@
-@mixin shape($width:6rem, $height:4rem, $border-radii: false)
+@mixin shape($width:6rem, $height:4rem, $border-radii:false)
   @if $border-radii != false
     border-radius: $border-radii
   width: $width
   height: $height
 
 
-@mixin rectangle($width:6rem, $height:4rem, $border-radii: false)
+@mixin rectangle($width:6rem, $height:4rem, $border-radii:false)
   +shape($width, $height, $border-radii)
 
 
-@mixin square($size:4rem, $border-radii: false)
+@mixin square($size:4rem, $border-radii:false)
   +shape($size, $size, $border-radii)
 
 
@@ -43,7 +43,7 @@
   @return $direction
 
 
-@mixin triangle($direction, $size: 1rem, $color: black)
+@mixin triangle($direction, $size:1rem, $color:black)
   $direction: _cardinal_mapping($direction)
   @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left)
     border-color: transparent

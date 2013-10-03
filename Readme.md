@@ -8,16 +8,26 @@ A small collection of commonly used Sass functions, mixins and placeholders.
 $ component install mkitt/corduroy
 ```
 
-## Tasks
-- Document
+## Usage
+
+## Todo
 - Test outputs
 - Make the repo public
 - Add component.io integration
 - Allow speed and easing values to be configurable
 - Add vertical rhythm Sass functions
 
+## Defaults
+The following variables are set as the default and should be overridden
+prior to calling a mixin or extending a placeholder.
+
+```sass
+$context-px: 16 !default
+$speed: 0.25s !default
+```
+
 ## Functions
-Conversion and color functions which return a value.
+Utility functions.
 
 ** Note: By default the variable `$context-px` used for the optional
 second parameter in `#em`, `#rem` and `#unit_less`is set to `16`. To
@@ -57,8 +67,7 @@ _Includes placeholder_
 
 #### +font-face($font-family, $file-path, $font-weight:normal, $font-style:normal, $asset-pipeline:false)
 One-liner for loading custom fonts with all the crazy path options. Pass `$asset-pipeline:true` to use the Rails helper. 
-
-Borrowed from [Thoughtbot's](http://thoughtbot.com/) excellent [Bourbon library](http://bourbon.io/)
+Borrowed from [Thoughtbot's](http://thoughtbot.com/) excellent [Bourbon library](http://bourbon.io/).
 
 #### +clearfix
 The [new micro clearfix](http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php)
@@ -92,7 +101,7 @@ Generic shape mixin, primarily used by other shape like mixin's.
 #### +rectangle($width:6rem, $height:4rem, $border-radii:false)
 Draws a rectangle shape.
 
-#### +square($size:4rem, $border-radii: false)
+#### +square($size:4rem, $border-radii:false)
 Draws a square shape.
 
 #### +circle($size:4rem)
@@ -101,12 +110,10 @@ Draws a circle shape.
 #### +oval($width:6rem, $height:4rem)
 Draws an oval shape.
 
-#### +triangle($direction, $size: 1rem, $color: black)
+#### +triangle($direction, $size:1rem, $color:black)
 Draws a triangle shape in the direction passed.
-
-Possible direction values are: `up`, `down`, `right`, `left`, `up-right`, `up-left`, `down-right`, `down-left`
-
-Or use the cardinal positions: `north`, `south`, `east`, `west`, `north-east`, `north-west`, `south-west`, `south-east`
+Possible direction values are: `up`, `down`, `right`, `left`, `up-right`, `up-left`, `down-right`, `down-left`.
+Or use the cardinal positions: `north`, `south`, `east`, `west`, `north-east`, `north-west`, `south-west`, `south-east`.
 
 #### +hidden
 Totally hidden from screen readers and browsers.
