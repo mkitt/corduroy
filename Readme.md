@@ -11,10 +11,10 @@ $ component install mkitt/corduroy
 ## Usage
 
 ## Todo
-- Test outputs
+- Allow speed and easing values to be configurable
+- More modular builds?
 - Make the repo public
 - Add component.io integration
-- Allow speed and easing values to be configurable
 - Add vertical rhythm Sass functions
 
 ## Defaults

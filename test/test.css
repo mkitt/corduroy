@@ -1,17 +1,58 @@
-.clearfix-placeholder:after {
-  content: "";
-  display: table;
-  clear: both;
+.test-hidden {
+  display: none !important;
+  visibility: hidden;
 }
 
-@keyframes animate-rotation {
-  from {
-    transform: rotate(0deg);
-  }
+.test-invisible {
+  visibility: hidden;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.test-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+.focusable.test-visuallyhidden:active, .focusable.test-visuallyhidden:focus {
+  clip: auto;
+  position: static;
+  overflow: visible;
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+
+.test-image-replacement {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+}
+.test-image-replacement:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+.test-cbh {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+body {
+  margin: 0;
+  font-size: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+section[role="main"] {
+  margin-left: 2em;
+  padding-bottom: 2em;
 }
 
 /* expect: 1.25em */
@@ -21,7 +62,7 @@
 
 /* expect: 2em */
 .test-em-context {
-  padding: 2em;
+  font-size: 2em;
 }
 
 /* expect: 1.25rem */
@@ -31,7 +72,7 @@
 
 /* expect: 2rem */
 .test-rem-context {
-  padding: 2rem;
+  font-size: 2rem;
 }
 
 /* expect: 1.25 */
@@ -54,26 +95,15 @@
   color: #cc00cc;
 }
 
-/* expect: #cc00cc */
+/* expect: #ff33ff */
 .test-tint {
   color: #ff33ff;
 }
 
-/* expect:
- * .clearfix-mixin:after {
- *   content: "";
- *   display: table;
- *   clear: both;
- * } */
-.clearfix-mixin:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* expect above, but higher in the file */
-.clearfix-placeholder {
-  display: block;
+.test-tab-focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
 /* @font-face with asset pipeline (needs sprockets yo!) */
@@ -101,4 +131,186 @@
   font-style: italic;
   src: url("crazy/path/font-file.eot");
   src: url("crazy/path/font-file.eot?#iefix") format("embedded-opentype"), url("crazy/path/font-file.woff") format("woff"), url("crazy/path/font-file.ttf") format("truetype"), url("crazy/path/font-file.svg#FontName") format("svg");
+}
+
+.test-shapes {
+  background-color: magenta;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.test-rectangle {
+  width: 100px;
+  height: 50px;
+}
+
+.test-rectangle-rounded {
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+}
+
+.test-square {
+  width: 100px;
+  height: 100px;
+}
+
+.test-square-rounded {
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.test-circle {
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+.test-oval {
+  border-radius: 50px / 25px;
+  width: 100px;
+  height: 50px;
+}
+
+.triangles {
+  margin: 1em 0;
+}
+
+.test-triangles {
+  display: inline-block;
+}
+
+.test-triangle-up {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-bottom-color: magenta;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-down {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-top-color: magenta;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-right {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-left-color: magenta;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-left {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-right-color: magenta;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-up-left {
+  border-top: 10px solid magenta;
+  border-right: 10px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-up-right {
+  border-top: 10px solid magenta;
+  border-left: 10px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-down-left {
+  border-bottom: 10px solid magenta;
+  border-right: 10px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-down-right {
+  border-bottom: 10px solid magenta;
+  border-left: 10px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-north {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-bottom-color: magenta;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-south {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-top-color: magenta;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-east {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-left-color: magenta;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-west {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-right-color: magenta;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-north-west {
+  border-top: 10px solid magenta;
+  border-right: 10px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-north-east {
+  border-top: 10px solid magenta;
+  border-left: 10px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-south-west {
+  border-bottom: 10px solid magenta;
+  border-left: 10px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.test-triangle-south-east {
+  border-bottom: 10px solid magenta;
+  border-right: 10px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.test-image-replacement {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
 }

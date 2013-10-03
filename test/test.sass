@@ -1,6 +1,13 @@
 @import ../corduroy
 
-// Conversion Functions
+body
+  margin: 0
+  font-size: 100%
+  font-family: Helvetica, Arial, sans-serif
+
+section[role="main"]
+  margin-left: 2em
+  padding-bottom: 2em
 
 /* expect: 1.25em
 .test-em-default
@@ -8,7 +15,7 @@
 
 /* expect: 2em
 .test-em-context
-  padding: em(24, 12)
+  font-size: em(24, 12)
 
 /* expect: 1.25rem
 .test-rem-default
@@ -16,7 +23,7 @@
 
 /* expect: 2rem
 .test-rem-context
-  padding: rem(24, 12)
+  font-size: rem(24, 12)
 
 /* expect: 1.25
 .test-unitless-default
@@ -30,8 +37,6 @@
 .test-percentage
   width: percent(500, 1000)
 
-// Coloring Functions
-
 /* expect: #cc00cc
 .test-shade
   color: shade(magenta, 20%)
@@ -43,21 +48,8 @@
 
 // Mixins
 
-/*
-  expect:
-  .clearfix-mixin:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-.clearfix-mixin
-  +clearfix
-
-/* expect above, but higher in the file
-.clearfix-placeholder
-  @extend %clearfix
-  display: block
-
+.test-tab-focus
+  +tab-focus
 
 /* @font-face with asset pipeline (needs sprockets yo!)
 +font-face("FontName", "font-file", $asset-pipeline:true)
@@ -67,4 +59,81 @@
 
 /* @font-face without asset pipeline, bold, italic
 +font-face("FontName", "crazy/path/font-file", bold, italic)
+
+
+.test-shapes
+  background-color: magenta
+  margin-top: 1em
+  margin-bottom: 1em
+.test-rectangle
+  +rectangle(100px, 50px)
+.test-rectangle-rounded
+  +rectangle(100px, 50px, 10px)
+.test-square
+  +square(100px)
+.test-square-rounded
+  +square(100px, 10px)
+.test-circle
+  +circle(100px)
+.test-oval
+  +oval(100px, 50px)
+
+.triangles
+  margin: 1em 0
+.test-triangles
+  display: inline-block
+
+.test-triangle-up
+  +triangle(up, 10px, magenta)
+.test-triangle-down
+  +triangle(down, 10px, magenta)
+.test-triangle-right
+  +triangle(right, 10px, magenta)
+.test-triangle-left
+  +triangle(left, 10px, magenta)
+
+.test-triangle-up-left
+  +triangle(up-left, 10px, magenta)
+.test-triangle-up-right
+  +triangle(up-right, 10px, magenta)
+.test-triangle-down-left
+  +triangle(down-left, 10px, magenta)
+.test-triangle-down-right
+  +triangle(down-right, 10px, magenta)
+
+
+.test-triangle-north
+  +triangle(north, 10px, magenta)
+.test-triangle-south
+  +triangle(south, 10px, magenta)
+.test-triangle-east
+  +triangle(east, 10px, magenta)
+.test-triangle-west
+  +triangle(west, 10px, magenta)
+
+.test-triangle-north-west
+  +triangle(north-west, 10px, magenta)
+.test-triangle-north-east
+  +triangle(north-east, 10px, magenta)
+.test-triangle-south-west
+  +triangle(south-west, 10px, magenta)
+.test-triangle-south-east
+  +triangle(south-east, 10px, magenta)
+
+
+.test-hidden
+  @extend %hidden
+.test-invisible
+  @extend %invisible
+.test-visuallyhidden
+  @extend %visuallyhidden
+
+.test-image-replacement
+  @extend %image-replacement
+  background-color: blue
+  width: 100px
+  height: 100px
+
+.test-cbh
+  @extend %checkbox-hack
 
