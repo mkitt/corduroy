@@ -2,13 +2,19 @@
 A small collection of commonly used Sass functions, mixins and placeholders.
 
 
-## Installation
+## Installation and Usage
+
+Install using `component(1)`
 
 ```bash
 $ component install mkitt/corduroy
 ```
 
-## Usage
+Import the full library (except snippets).
+
+```sass
+@import mkitt-corduroy/corduroy
+```
 
 
 ## Defaults
