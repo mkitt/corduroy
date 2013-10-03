@@ -1,3 +1,5 @@
+// Most of these courtesy of H5BP http://html5boilerplate.com/
+
 // Totally hidden from screen readers and browsers
 @mixin hidden
   display: none !important
@@ -15,8 +17,17 @@
 
 
 // Hide visually and from screenreaders, but maintain layout
-@mixin invisible
+@mixin conceal
   visibility: hidden
+%conceal
+  +conceal
+
+
+// Hide visually and remove from layout (useful for the checkbox hack)
+@mixin invisible
+  position: absolute
+  visibility: hidden
+  opacity: 0
 %invisible
   +invisible
 
@@ -67,14 +78,4 @@
     height: 150%
 %image-replacement
   +image-replacement
-
-
-@mixin checkbox-hack
-  position: absolute
-  visibility: hidden
-  opacity: 0
-%checkbox-hack
-  +checkbox-hack
-
-// Most of these courtesy of H5BP http://html5boilerplate.com/
 

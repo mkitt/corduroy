@@ -3,8 +3,14 @@
   visibility: hidden;
 }
 
-.test-invisible {
+.test-conceal {
   visibility: hidden;
+}
+
+.test-invisible {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .test-visuallyhidden {
@@ -36,12 +42,6 @@
   display: block;
   width: 0;
   height: 150%;
-}
-
-.test-cbh {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
 }
 
 body {
@@ -104,15 +104,6 @@ section[role="main"] {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
-}
-
-/* @font-face with asset pipeline (needs sprockets yo!) */
-@font-face {
-  font-family: "FontName";
-  font-weight: normal;
-  font-style: normal;
-  src: font-url("font-file.eot");
-  src: font-url("font-file.eot?#iefix") format("embedded-opentype"), font-url("font-file.woff") format("woff"), font-url("font-file.ttf") format("truetype"), font-url("font-file.svg#FontName") format("svg");
 }
 
 /* @font-face without asset pipeline */

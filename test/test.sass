@@ -1,4 +1,5 @@
 @import ../corduroy
+@import ../snippets/tab_focus
 
 body
   margin: 0
@@ -27,11 +28,11 @@ section[role="main"]
 
 /* expect: 1.25
 .test-unitless-default
-  line-height: unit_less(20)
+  line-height: unit-less(20)
 
 /* expect: 2
 .test-unitless-context
-  line-height: unit_less(24, 12)
+  line-height: unit-less(24, 12)
 
 /* expect: 50%
 .test-percentage
@@ -50,9 +51,6 @@ section[role="main"]
 
 .test-tab-focus
   +tab-focus
-
-/* @font-face with asset pipeline (needs sprockets yo!)
-+font-face("FontName", "font-file", $asset-pipeline:true)
 
 /* @font-face without asset pipeline
 +font-face("FontName", "crazy/path/font-file")
@@ -123,17 +121,15 @@ section[role="main"]
 
 .test-hidden
   @extend %hidden
-.test-invisible
-  @extend %invisible
+.test-conceal
+  @extend %conceal
 .test-visuallyhidden
   @extend %visuallyhidden
-
+.test-invisible
+  @extend %invisible
 .test-image-replacement
   @extend %image-replacement
   background-color: blue
   width: 100px
   height: 100px
-
-.test-cbh
-  @extend %checkbox-hack
 

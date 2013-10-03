@@ -1,15 +1,9 @@
-%hardware-accelerate
-  transform: translateZ(0)
-  backface-visibility: hidden
-  perspective: 1000
-
-
 %transition-all
   transition: all $speed ease
 
 
 %transition-transform
-  transition: transform $speed $ease-ios-panel
+  transition: transform $speed $ease-in-out-quart
 
 
 %transition-color
@@ -28,6 +22,7 @@
   transition: background-color $speed ease, border-color $speed ease
 
 
+// Couple with `%transition-hide` and `%transition-show`
 %transition-visibility
   transition: opacity $speed ease 0s, visibility 0s ease $speed
 
@@ -43,6 +38,7 @@
   opacity: 1
 
 
+// Couple with `%transition-fade-out` and `%transition-fade-in`
 %transition-opacity
   transition: opacity $speed ease
 
@@ -55,6 +51,7 @@
   opacity: 1
 
 
+// Couple with `%transition-collapse` and `%transition-collapse-in`
 %transition-height
   transition: height $speed $ease-in-out-quart
 

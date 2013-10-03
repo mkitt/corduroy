@@ -1,0 +1,8 @@
+@mixin hardware-accelerate
+  transform: translateZ(0)
+  backface-visibility: hidden
+  perspective: 1000
+
+%hardware-accelerate
+  +hardware-accelerate
+
