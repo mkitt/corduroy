@@ -22,7 +22,7 @@ $context-px: 16 !default
 ## Functions
 Utility functions and variables.
 
-### [bezier variables](functions/_besizer.sass)
+### [bezier variables](functions/_bezier.sass)
 A slew of various `cubic-bezier` variables based on [Robert Penner's
 easing equations](http://www.robertpenner.com/easing/).
 
