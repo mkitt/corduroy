@@ -23,27 +23,27 @@ Conversion and color functions which return a value.
 second parameter in `#em`, `#rem` and `#unit_less`is set to `16`. To
 override this value, set it prior to using one of these functions.
 
-### [em($px, $context:$context-px)](functions/_conversion.sass)
+#### em($px, $context:$context-px)
 Convert a unitless `pixel` value to an `em` value. Takes an optional
 second parameter as the context. 
 
-### [rem($px, $context:$context-px)](functions/_conversion.sass)
+#### rem($px, $context:$context-px)
 Convert a unitless `pixel` value to a `rem` value. Takes an optional
 second parameter as the context. 
 
-### [unit_less($px, $context:$context-px)](functions/_conversion.sass)
+#### unit_less($px, $context:$context-px)
 Divide a unitless `pixel` value by a `context`, similar to the `#rem`
 function except the value returned does not contain a unit of
 measurement.
 
-### [percent($px, $context)](functions/_conversion.sass)
+#### percent($px, $context)
 Converts a target `px` value to a percentage constrained within a
 context.
 
-### [shade($color, $percent)](functions/_coloring.sass)
+#### shade($color, $percent)
 Mix black into a color by a certain percentage.
 
-### [tint($color, $percent)](functions/_coloring.sass)
+#### tint($color, $percent)
 Mix white into a color by a certain percentage.
 
 
@@ -51,21 +51,21 @@ Mix white into a color by a certain percentage.
 Most mixins also come with a placeholder for use with `@extend`. These
 are noted below.
 
-### [+tab-focus](mixins/_display.sass)
+#### +tab-focus
 Resets the normal browser behavior for tab focusable content.
 _Includes placeholder_
 
-### [+font-face($font-family, $file-path, $font-weight:normal, $font-style:normal, $asset-pipeline:false)](mixins/_font_face.sass)
+#### +font-face($font-family, $file-path, $font-weight:normal, $font-style:normal, $asset-pipeline:false)
 One-liner for loading custom fonts with all the crazy path options. Pass `$asset-pipeline:true` to use the Rails helper. 
 
 Borrowed from [Thoughtbot's](http://thoughtbot.com/) excellent [Bourbon library](http://bourbon.io/)
 
-### [+clearfix](mixins/_layout.sass)
+#### +clearfix
 The [new micro clearfix](http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php)
 utilizing pseudo elements to clear floats.
 _Includes placeholder_
 
-### [+sticky-footer($footer-height, $outer:".main", $inner:".content", $footer:".footer")](mixins/_layout.sass)
+#### +sticky-footer($footer-height, $outer:".main", $inner:".content", $footer:".footer")
 Creates a sticky footer for the page structure. Requires the following
 markup structure, with selector names mapped to the default parameters
 above.
@@ -81,58 +81,58 @@ above.
 </body>
 ```
 
-### [+unsticky-footer($outer:".main", $inner:".content", $footer:".footer")](mixins/_layout.sass)
+#### +unsticky-footer($outer:".main", $inner:".content", $footer:".footer")
 Reverse the effects of the `sticky-footer` mixin, primarily used in
 `max-width` media queries. Ensure the selector names match what was
 passed within the `sticky-footer` mixin.
 
-### [+shape($width:6rem, $height:4rem, $border-radii:false)](mixins/_shape.sass)
+#### +shape($width:6rem, $height:4rem, $border-radii:false)
 Generic shape mixin, primarily used by other shape like mixin's.
 
-### [+rectangle($width:6rem, $height:4rem, $border-radii:false)](mixins/_shape.sass)
+#### +rectangle($width:6rem, $height:4rem, $border-radii:false)
 Draws a rectangle shape.
 
-### [+square($size:4rem, $border-radii: false)](mixins/_shape.sass)
+#### +square($size:4rem, $border-radii: false)
 Draws a square shape.
 
-### [+circle($size:4rem)](mixins/_shape.sass)
+#### +circle($size:4rem)
 Draws a circle shape.
 
-### [+oval($width:6rem, $height:4rem)](mixins/_shape.sass)
+#### +oval($width:6rem, $height:4rem)
 Draws an oval shape.
 
-### [+triangle($direction, $size: 1rem, $color: black)](mixins/_shape.sass)
+#### +triangle($direction, $size: 1rem, $color: black)
 Draws a triangle shape in the direction passed.
 
 Possible direction values are: `up`, `down`, `right`, `left`, `up-right`, `up-left`, `down-right`, `down-left`
 
 Or use the cardinal positions: `north`, `south`, `east`, `west`, `north-east`, `north-west`, `south-west`, `south-east`
 
-### [+hidden](mixins/_visibility.sass)
+#### +hidden
 Totally hidden from screen readers and browsers.
 _Includes placeholder_
 
-### [+shown](mixins/_visibility.sass)
+#### +shown
 Reverse the effects of `.hidden`.
 _Includes placeholder_
 
-### [+invisible](mixins/_visibility.sass)
+#### +invisible
 Hide visually and from screenreaders, but maintain layout.
 _Includes placeholder_
 
-### [+visuallyhidden](mixins/_visibility.sass)
+#### +visuallyhidden
 Only visually hidden, still available to screen readers.
 _Includes placeholder_
 
-### [+visuallyshown](mixins/_visibility.sass)
+#### +visuallyshown
 Reverse the settings applied by `.visuallyhidden`.
 _Includes placeholder_
 
-### [+image-replacement](mixins/_visibility.sass)
+#### +image-replacement
 Prep an element to replace it's contents with a `background-image`.
 _Includes placeholder_
 
-### [+checkbox-hack](mixins/_visibility.sass)
+#### +checkbox-hack
 Hide an element (typically a checkbox) when using a connected label to
 control behaviors.
 _Includes placeholder_
@@ -141,65 +141,65 @@ _Includes placeholder_
 ## Movement
 Placeholders for transition and animation control.
 
-### [$bezier](movement/_bezier.sass)
+#### $bezier
 A slew of various `cubic-bezier` variables based on [Robert Penner's
 easing equations](http://www.robertpenner.com/easing/).
 
-### [%hardware-accelerate](movement/_transition.sass)
+#### %hardware-accelerate
 Enable hardware acceleration for an element.
 
-### [%transition-all](movement/_transition.sass)
+#### %transition-all
 Transition all properties on an element.
 
-### [%transition-transform](movement/_transition.sass)
+#### %transition-transform
 Transition the `transform` property on an element.
 
-### [%transition-color](movement/_transition.sass)
+#### %transition-color
 Transition the `color` property on an element.
 
-### [%transition-background-color](movement/_transition.sass)
+#### %transition-background-color
 Transition the `background-color` property on an element.
 
-### [%transition-background-border-color](movement/_transition.sass)
+#### %transition-background-border-color
 Transition the `background-color` and `border-color` properties on an element.
 
-### [%transition-visibility](movement/_transition.sass)
+#### %transition-visibility
 Transition the `opacity` and `visibility` properties on an element.
 Typically used with `%transition-hide` and `%transition-show`.
 
-### [%transition-hide](movement/_transition.sass)
+#### %transition-hide
 Set the `opacity` and `visibility` properties for use with
 `%transition-visibility`.
 
-### [%transition-show](movement/_transition.sass)
+#### %transition-show
 Set the `opacity` and `visibility` properties for use with
 `%transition-visibility`.
 
-### [%transition-opacity](movement/_transition.sass)
+#### %transition-opacity
 Transition the `opacity` property on an element.
 Typically used with `%transition-fade-out` and `%transition-fade-in`.
 
-### [%transition-fade-out](movement/_transition.sass)
+#### %transition-fade-out
 Set the `opacity` level to `0` for use with `%transition-opacity`.
 
-### [%transition-fade-in](movement/_transition.sass)
+#### %transition-fade-in
 Set the `opacity` level to `1` for use with `%transition-opacity`.
 
-### [%transition-height](movement/_transition.sass)
+#### %transition-height
 Transition the `height` property on an element.
 Typically used with `%transition-collapse` and `%transition-collapse-in`.
 
-### [%transition-collapse](movement/_transition.sass)
+#### %transition-collapse
 Set properties related to transitioning a `height` for use with
 `%transition-height`.
 
-### [%transition-collapse-in](movement/_transition.sass)
+#### %transition-collapse-in
 Set properties related to transitioning a `height` for use with
 `%transition-height`.
 
-### [+animate-rotation($start:0deg, $end:360deg)](movement/_animation.sass)
+#### +animate-rotation($start:0deg, $end:360deg)
 Mixin the `@keyframes` animation for rotation.
 
-### [%animation-spin](movement/_animation.sass)
+#### %animation-spin
 Extend an infinite rotation animation. Used with the `+animate-rotation` mixin. 
 
