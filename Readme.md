@@ -151,8 +151,3 @@ them from there.
 - [sticky_footer.sass](snippets/_sticky_footer.sass): mixins for creating and releasing a sticky footer structure
 - [tab_focus.sass](snippets/_tab_focus.sass): mixin and placeholder for resetting the browser styles for tab focusable elements
 
-
-## Todo
-- Add vertical rhythm Sass functions
-- Add modular scale measurements
-
