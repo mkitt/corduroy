@@ -2,7 +2,7 @@
   "name": "corduroy",
   "repo": "mkitt/corduroy",
   "description": "A small collection of commonly used Sass functions, mixins and placeholders.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": ["sass", "mixins", "css"],
   "dependencies": {},
   "development": {},
