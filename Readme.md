@@ -75,6 +75,7 @@ The [new micro clearfix](http://www.css-101.org/articles/clearfix/latest-new-cle
 utilizing pseudo elements to clear floats.
 _Includes placeholder_
 
+
 #### [+font-face($family, $file-path, $weight:normal, $style:normal, $pipeline:false)](mixins/_font_face.sass)
 One-liner for loading custom fonts with all the crazy path options. Pass `$pipeline:true` to use the Rails helper. 
 Borrowed from [Thoughtbot's](http://thoughtbot.com/) excellent [Bourbon library](http://bourbon.io/).
@@ -84,6 +85,11 @@ Borrowed from [Thoughtbot's](http://thoughtbot.com/) excellent [Bourbon library]
 
 #### +hardware-accelerate
 Enable hardware acceleration for an element.
+_Includes placeholder_
+
+
+### [+overflow-ellipsis](mixins/_overflow-ellipsis.sass)
+Makes single line text with an ellipsis overflow.
 _Includes placeholder_
 
 
