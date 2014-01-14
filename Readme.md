@@ -116,6 +116,11 @@ Possible direction values are: `up`, `down`, `right`, `left`, `up-right`, `up-le
 Or use cardinal positions: `north`, `south`, `east`, `west`, `north-east`, `north-west`, `south-east`, `south-west`.
 
 
+### [+vertical-align](mixins/_vertical_align.sass)
+Vertically align anything within a container(IE9+).
+_Includes placeholder_
+
+
 ### [visibility mixins](mixins/_visibility.sass)
 Most of these courtesy of [H5BP](http://html5boilerplate.com/).
 
