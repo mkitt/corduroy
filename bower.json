@@ -1,17 +1,17 @@
 {
   "name": "corduroy",
   "repo": "mkitt/corduroy",
+  "homepage": "https://github.com/mkitt/corduroy",
   "description": "A small collection of commonly used Sass functions, mixins and placeholders.",
-  "version": "0.0.5",
   "keywords": ["sass", "mixins", "css"],
   "dependencies": {},
   "development": {},
   "license": "MIT",
   "ignore": [
-    "test/**/*",
+    "test",
     "component.json",
-    "Makefile.md",
-    "Readme.md"
+    "Makefile",
+    "Readme.md",
+    "License.md"
   ]
 }
-
